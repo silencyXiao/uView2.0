@@ -2,7 +2,7 @@
 	<text
 		v-if="show && ((Number(value) === 0 ? showZero : true) || isDot)"
 		:class="[isDot ? 'u-badge--dot' : 'u-badge--not-dot', inverted && 'u-badge--inverted', shape === 'horn' && 'u-badge--horn', `u-badge--${type}${inverted ? '--inverted' : ''}`]"
-		:style="[$u.addStyle(customStyle), badgeStyle]"
+		:style="[badgeStyle, $u.addStyle(customStyle)]"
 		class="u-badge"
 	>{{ isDot ? '' :showValue }}</text>
 </template>
